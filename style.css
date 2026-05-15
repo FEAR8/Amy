@@ -1,0 +1,134 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background-image:url('fondo.png');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    font-family:Arial, sans-serif;
+}
+
+.container{
+    text-align:center;
+    position:relative;
+    z-index:2;
+    /* NUEVO */
+    margin-left:500px;
+}
+
+.envelope{
+    position:relative;
+    width:480px;
+    height:320px;
+    background:#ff4d6d;
+    border-radius:20px;
+    overflow:hidden;
+    cursor:pointer;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    transition:1s;
+}
+
+/* Tapa del sobre */
+.top{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:#ff758f;
+    clip-path:polygon(0 0, 50% 55%, 100% 0);
+    transform-origin:top;
+    transition:1s;
+    z-index:5;
+}
+
+/* Carta */
+.letter{
+    position:absolute;
+    width:90%;
+    height:90%;
+    background:white;
+    left:5%;
+    top:100%;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,0.2);
+    transition:1.3s;
+}
+
+.letter img{
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+
+/* Animación al abrir */
+.open .top{
+    transform:rotateX(180deg);
+    opacity:0;
+}
+
+/* La foto sale y queda centrada */
+.open .letter{
+    position:fixed;
+    top:50%;
+    left:50%;
+    width:500px;
+    height:500px;
+    transform:translate(-50%, -50%);
+    z-index:100;
+    border-radius:25px;
+
+    /* Scroll */
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+
+/* Desaparece el sobre */
+.open{
+    background:transparent;
+    box-shadow:none;
+}
+
+/* Botón */
+button{
+    margin-top:40px;
+    padding:18px 45px;
+    border:none;
+    border-radius:50px;
+    background:white;
+    color:#ff4d6d;
+    font-size:22px;
+    font-weight:bold;
+    cursor:pointer;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+/* Corazones y confeti */
+.heart{
+    position:absolute;
+    animation:fall linear forwards;
+    pointer-events:none;
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(110vh);
+        opacity:0;
+    }
+}
