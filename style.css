@@ -31,7 +31,7 @@ body{
     position:relative;
     width:480px;
     height:320px;
-    background:#ff4d6d;
+    background:#ff4d6d !important;
     border-radius:20px;
     overflow:hidden;
     cursor:pointer;
@@ -44,7 +44,7 @@ body{
     position:absolute;
     width:100%;
     height:100%;
-    background:#ff758f;
+    background:#ff758f !important;
     clip-path:polygon(0 0, 50% 55%, 100% 0);
     transform-origin:top;
     transition:1s;
