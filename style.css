@@ -16,6 +16,9 @@ body{
     background-position:center;
     background-repeat:no-repeat;
 
+    /* NUEVO */
+    background-attachment:fixed;
+
     font-family:Arial, sans-serif;
 }
 
