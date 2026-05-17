@@ -89,9 +89,12 @@ body{
     z-index:100;
     border-radius:25px;
 
-    /* Scroll */
     overflow-y:auto;
     overflow-x:hidden;
+
+    overscroll-behavior:contain;
+
+    -webkit-overflow-scrolling:touch;
 }
 
 /* Desaparece el sobre */
@@ -144,22 +147,24 @@ button:hover{
 
     /* Carta abierta en móvil */
     .open .letter{
-        position:absolute;
+      position:absolute;
 
-        width:90vw;
-        height:85vh;
+    width:90vw;
+    height:85vh;
 
-        top:50%;
-        left:50%;
+    top:50%;
+    left:50%;
 
-        transform:translate(-50%, -50%);
+    transform:translate(-50%, -50%);
 
-        border-radius:20px;
+    border-radius:20px;
 
-        overflow-y:auto;
-        overflow-x:hidden;
+    overflow-y:auto;
+    overflow-x:hidden;
 
-        -webkit-overflow-scrolling:touch;
+    overscroll-behavior:contain;
+
+    -webkit-overflow-scrolling:touch;
     }
 
     button{
