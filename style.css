@@ -15,10 +15,7 @@ body{
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
-
-    /* NUEVO */
-    background-attachment:fixed;
-
+    
     font-family:Arial, sans-serif;
 }
 
@@ -129,10 +126,11 @@ button:hover{
     pointer-events:none;
 }
 
-/* =========================
-   RESPONSIVE PARA TELÉFONO
-========================= */
 @media (max-width: 768px){
+
+    html, body{
+        overflow:hidden;
+    }
 
     .container{
         margin-left:0;
@@ -144,32 +142,31 @@ button:hover{
         height:220px;
     }
 
-   /* Carta abierta en móvil */
-.open .letter{
-    position:absolute;
+    /* Carta abierta en móvil */
+    .open .letter{
+        position:absolute;
 
-    width:90vw;
-    height:85vh;
+        width:90vw;
+        height:85vh;
 
-    top:50%;
-    left:50%;
+        top:50%;
+        left:50%;
 
-    transform:translate(-50%, -50%);
+        transform:translate(-50%, -50%);
 
-    border-radius:20px;
+        border-radius:20px;
 
-    overflow-y:auto;
-    overflow-x:hidden;
+        overflow-y:auto;
+        overflow-x:hidden;
 
-    -webkit-overflow-scrolling:touch;
-}
+        -webkit-overflow-scrolling:touch;
+    }
 
     button{
         font-size:18px;
         padding:14px 30px;
     }
 
-    /* Ajusta partículas */
     .heart{
         font-size:20px !important;
     }
@@ -177,6 +174,7 @@ button:hover{
     body{
         background-position:center;
     }
+
 }
 
 @keyframes fall{
@@ -184,4 +182,8 @@ button:hover{
         transform:translateY(110vh);
         opacity:0;
     }
+    /* Evita rebote y zoom raro en móviles */
+html, body{
+    overscroll-behavior:none;
+}
 }
