@@ -126,6 +126,48 @@ button:hover{
     pointer-events:none;
 }
 
+/* =========================
+   RESPONSIVE PARA TELÉFONO
+========================= */
+@media (max-width: 768px){
+
+    .container{
+        margin-left:0;
+        transform:none;
+    }
+
+    .envelope{
+        width:320px;
+        height:220px;
+    }
+
+    /* Carta abierta */
+    .open .letter{
+        width:90vw;
+        height:85vh;
+
+        top:50%;
+        left:50%;
+
+        transform:translate(-50%, -50%);
+        border-radius:20px;
+    }
+
+    button{
+        font-size:18px;
+        padding:14px 30px;
+    }
+
+    /* Ajusta partículas */
+    .heart{
+        font-size:20px !important;
+    }
+
+    body{
+        background-position:center;
+    }
+}
+
 @keyframes fall{
     to{
         transform:translateY(110vh);
